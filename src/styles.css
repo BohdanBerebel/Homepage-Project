@@ -1,0 +1,256 @@
+body {
+  background-color: lightgray;
+  margin: 0;
+}
+p {
+  font-family: "Roboto", serif;
+}
+h1,
+h2 {
+  font-family: "Playfair Display" serif;
+  margin: 0.5rem 0;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 10% 1rem 10%;
+}
+.imgSection img {
+  min-height: 280px;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-right: 0;
+  height: 100%;
+}
+.imgSection {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto auto;
+  justify-content: center;
+  justify-items: center;
+  align-content: end;
+
+  max-height: 100%;
+  max-width: 100%;
+}
+.imgSection p {
+  position: absolute;
+  font-family: "Playfair Display", "Roboto", serif;
+  font-size: calc(5px + 2vw);
+  margin: 0;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 5px black;
+  font-weight: bold;
+}
+
+.bio {
+  min-height: 185px;
+  background-color: beige;
+  font-size: 2rem;
+  text-indent: 1rem;
+  /* flex: 1 1 0; */
+  max-width: 100%;
+  /* max-height: 30vh; */
+  /* overflow: auto; */
+  align-content: center;
+  justify-content: start;
+  padding: 1rem;
+}
+.bio p {
+  font-size: 1.5rem;
+  text-align: justify;
+  margin: 0;
+}
+
+.bio img {
+  width: 30px;
+}
+
+.top .icons {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+}
+
+svg {
+  width: 30px;
+}
+
+.project div > img {
+  width: 30px;
+}
+
+.project {
+  text-align: justify;
+  text-indent: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  /* align-items: center; */
+  background-color: antiquewhite;
+  box-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+
+.project:hover {
+  box-shadow: 5px 5px 15px rgb(0, 0, 0);
+}
+
+.project > div {
+  display: grid;
+  grid-template-columns: auto auto;
+  /* justify-content: center; */
+  justify-items: center;
+  align-items: center;
+}
+
+.project > div,
+.project > p {
+  padding: 0 1rem;
+}
+
+.project > div > div {
+  justify-self: end;
+}
+
+.project h2 {
+  justify-self: start;
+}
+
+.project > img {
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 280px);
+  gap: 2rem;
+  justify-content: center;
+}
+footer .icons img {
+  width: 30px;
+  padding-right: 0.5rem;
+}
+
+footer {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem 1rem;
+  background-color: cornflowerblue;
+  margin: 0;
+}
+footer > img {
+  max-height: 50vh;
+  place-self: center;
+  /* width: 100%; */
+}
+
+main > section:nth-of-type(2) {
+  margin: 2rem 0;
+}
+main > section:nth-of-type(2) > h1 {
+  padding-left: 5%;
+  /* color: red; */
+}
+
+@media (max-width: 500px) {
+  .imgSection p {
+    font-size: 10vw;
+  }
+  .top {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-content: center;
+    max-height: none;
+    margin: 0;
+  }
+  .top h1 {
+    text-align: center;
+  }
+
+  .top .icons {
+    justify-content: center;
+  }
+  .imgSection > img {
+    width: 90%;
+    border-radius: 0;
+    margin: 1rem 1rem 0 1rem;
+    height: auto;
+  }
+  .imgSection > p {
+    bottom: 0;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin: 0 1rem;
+    gap: 3rem;
+  }
+
+  main > section:nth-of-type(2) > h1 {
+    text-align: center;
+  }
+  .project {
+    margin: 0 auto;
+    /* width: 350px; */
+  }
+  .project > img {
+    width: 100%;
+    margin: 0 auto;
+  }
+  footer {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+  footer > div {
+    padding: 0 1rem;
+  }
+  footer > img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+@media (501px <= width <= 1000px) {
+  .top {
+    display: block;
+    /* border: red solid 5px; */
+    float: left;
+  }
+  .imgSection {
+    /* border: green solid 5px; */
+    display: inline;
+    float: left;
+  }
+  .imgSection img {
+    width: 40vw;
+    max-width: 330px;
+  }
+  .imgSection p {
+    font-size: 2rem;
+    transform: translateX(70%);
+    top: 0;
+    right: 0;
+    width: 300px;
+  }
+  .bio {
+    background-color: rgba(255, 255, 255, 0);
+    /* border: blue solid 5px; */
+    display: inline;
+  }
+  .top .icons {
+    display: none;
+  }
+  footer > img {
+    width: 100%;
+    object-fit: contain;
+    place-self: center;
+  }
+}
